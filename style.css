@@ -24,6 +24,39 @@ body{
     linear-gradient(180deg, var(--bg), #ffffff 30%, var(--bg));
 }
 
+.timeline{
+  position:relative;
+  margin-top:40px;
+  padding-left:30px;
+  border-left:2px solid rgba(255,255,255,.3);
+}
+
+.timeline-item{
+  margin-bottom:40px;
+  position:relative;
+}
+
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-41px;
+  top:5px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#d4af37;
+}
+
+.timeline-hour{
+  font-size:1.4rem;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+
+.timeline-event{
+  font-size:1rem;
+  opacity:.8;
+}
 
 .fondo_verde{
   background:#70895d;
@@ -473,7 +506,7 @@ footer{
 }
 
 .dresscode-img{
-  width:25%;
+  width:40%;
 }
 
 /* ===== MESA DE REGALOS ===== */
