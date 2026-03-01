@@ -39,6 +39,10 @@ a{color:inherit}
   background:#70895d;
   border-bottom:1px solid rgba(0,0,0,.06);
 }
+
+.centro{
+  text-align: center;
+ }
 .center{
   text-align: center;
   font-family:"Parisienne", cursive;
@@ -456,3 +460,52 @@ footer{
   .mapFrame{min-height:280px}
 }
 
+/* ===== DRESS CODE ===== */
+
+.dresscode-card
+
+.dresscode-title{
+  font-family:"Playfair Display", serif;
+  letter-spacing:.35em;
+  font-size:1.2rem;
+  margin-bottom:30px;
+  color:#5b714a;
+}
+
+.dresscode-img{
+  width:25%;
+}
+
+/* ===== MESA DE REGALOS ===== */
+
+.giftBox{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.giftItem{
+  text-align:center;
+  padding:25px;
+  border-radius:18px;
+  background:rgba(0,0,0,.03);
+  border:1px solid rgba(0,0,0,.06);
+  min-width:260px;
+}
+
+.giftLabel{
+  font-size:.8rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  opacity:.6;
+  margin-bottom:8px;
+}
+
+.giftValue{
+  font-size:1.1rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  margin-bottom:18px;
+}

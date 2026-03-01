@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +9,27 @@
   <!-- Fuentes (Google Fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&family=Parisienne&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function copiarTexto(id, btn) {
+      const texto = document.getElementById(id).innerText;
+
+      navigator.clipboard.writeText(texto);
+
+      btn.innerText = "Copiado ✔";
+      setTimeout(() => {
+        btn.innerText = "Copiar";
+      }, 2000);
+    }
+  </script>
 </head>
+
+
 <body>
 
   <!-- TOPBAR -->
@@ -25,9 +42,9 @@
       </div>
 
       <nav class="nav">
-        <a href="#historia">Nuestra historia</a>
-        <a href="#detalles">Detalles</a>
-        <a href="#ubicacion">Ubicación</a>
+        <strong><a href="#historia">Nuestra historia</a></strong>
+        <strong><a href="#detalles">Detalles</a></strong>
+        <strong><a href="#dresscode">Dress Code</a></strong>
       </nav>
     </div>
   </header>
@@ -42,19 +59,14 @@
     <div class="hero__overlay"></div>
 
     <div class="container hero__content">
-      <p class="kicker">NUESTRA BODA</p>
+      <h2 class="kicker">• NOS CASAMOS •</h2>
       <h1 class="title">Guadalupe y Roberto</h1>
       <p class="subtitle">2 de Mayo • Salón Las Heras</p>
       <p class="desc">
         Te invitamos a compartir con nosotros uno de los días más importantes de nuestras vidas.
       </p>
 
-      <div class="ctaRow">
-        
-        <a class="btn btn--ghost" href="#ubicacion">
-          📍 Cómo llegar
-        </a>
-      </div>
+
 
       <div class="scrollHint" aria-hidden="true">
         <span></span><span></span><span></span>
@@ -67,7 +79,6 @@
     <div class="container">
       <div class="card card--center reveal">
         <p class="eyebrow">FALTAN</p>
-        <h2 class="h2">para el gran día</h2>
 
         <div class="countdown" id="countdown">
           <div class="cdItem">
@@ -87,13 +98,19 @@
             <div class="cdLbl">Seg</div>
           </div>
         </div>
-
+        <div>
+          <h2 class="h2">PARA EL GRAN DÍA</h2>
+        </div>
         <div class="pill">
-          <span class="pillDot"></span>
           <span>Sábado 02 • Mayo • Salón Las Heras • 20:00 hs</span>
         </div>
       </div>
     </div>
+  </section>
+
+  <section>
+    <p class="center">
+      El amor encontró su hogar con nosotros y nosotros nos encontramos el uno al otro para siempre.</p>
   </section>
 
   <!-- DETALLES BÁSICOS -->
@@ -107,60 +124,86 @@
           <div class="iconBadge">🕊️</div>
           <div class="cardTitle">Misa</div>
           <p class="muted">Sábado</p>
-          <div class="bigdate">02</div>
-          <p> Mayo • <strong>18:00 hs</strong></p>
-          <p>Lugar: <strong>Capilla</strong></p>
-          <a class="btn btn--light" href="#ubicacion">📍 Cómo llegar</a>
+          <div class="bigdate">02-05-2026</div>
+          <p> Hora : <strong>18:00 hs</strong></p>
+          <p> Parroquia : <strong>Santa Rosa de Lima</strong></p>
+          <a class="btn btn--light" href=" https://maps.app.goo.gl/xNf3u8JidLuU6dot6?g_st=iw">📍 Cómo llegar</a>
         </div>
 
         <div class="card reveal">
           <div class="iconBadge">🥂</div>
           <div class="cardTitle">Recepción / Fiesta</div>
           <p class="muted">Sábado</p>
-          <div class="bigdate">02</div>
-          <p> Mayo • <strong>20:00 hs</strong></p>
-          <p>Lugar: <strong>Salón Las Heras</strong></p>
-          <a class="btn btn--light" href="#ubicacion">📍 Cómo llegar</a>
+          <div class="bigdate">02-05-2026</div>
+          <p> Hora : <strong>20:00 hs</strong></p>
+          <p> Lugar : <strong>Salón Las Heras</strong></p>
+          <a class="btn btn--light" href="https://maps.app.goo.gl/GdAaUqgBMH7FeKQg7">📍 Cómo llegar</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- UBICACIÓN -->
-  <section class="section" id="ubicacion">
+  <!-- Dress Code -->
+
+  <section class="section section--soft" id="dresscode">
     <div class="container">
-      <h2 class="h2">Ubicación</h2>
-      <p class="lead">Abrí el mapa para llegar fácil.</p>
 
-      <div class="locationGrid">
+      <h2 class="h2 center">Dress Code</h2>
+      <br>
+      <br>
+      <div class="card card--center reveal dresscode-card">
 
-        <!-- SALÓN -->
-        <div class="card reveal">
-          <p class="cardTitle">Recepción</p>
-          <p class="muted"><strong>Salón Las Heras</strong></p>
+        <strong><h3 class="dresscode-title">• ELEGANTE •</h3></strong>
 
-          <a class="btn btn--primary"
-             href="https://maps.app.goo.gl/GdAaUqgBMH7FeKQg7"
-             target="_blank" rel="noopener">
-            Abrir en Google Maps
-          </a>
+        <img src="Img/dresscode.png.jpeg" alt="Vestido largo y traje" class="dresscode-img">
+
+        <p class="dresscode-text">
+          Recordá que el blanco está reservado para la novia.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- mesa de regalos -->
+
+  <section class="section" id="detalles">
+    <div class="container">
+
+      <h2 class="h2 center">Mesa de Regalos</h2>
+      <br>
+      <div class="card card--center reveal ">
+
+        <h3 class="dresscode-title">Tu presencia es lo más importante, pero si deseas hacernos un regalo podrias
+          ayudarnos con nuestra luna de miel</h3>
+      </div>
+      <div class="giftBox">
+
+        <div class="giftItem">
+          <strong><p class="giftLabel">Alias</p></strong>
+          <p class="giftValue" id="aliasTexto">BODAGYT26</p>
+          <button class="btn btn--primary" onclick="copiarTexto('aliasTexto', this)">
+            Copiar
+          </button>
         </div>
 
-        <!-- CAPILLA (NUEVA AGREGADA) -->
-        <div class="card reveal">
-          <p class="cardTitle">Ceremonia</p>
-          <p class="muted"><strong>Capilla</strong></p>
-
-          <a class="btn btn--primary"
-             href="https://maps.app.goo.gl/DTxEweNvbhcddad86"
-             target="_blank" rel="noopener">
-            Abrir en Google Maps
-          </a>
+        <div class="giftItem">
+          <strong><p class="giftLabel">CBU</p></strong>
+          <p class="giftValue" id="cbuTexto">4530000800018727786624</p>
+          <button class="btn btn--primary" onclick="copiarTexto('cbuTexto', this)">
+            Copiar
+          </button>
         </div>
-
+      </div>
+      <br>
+      <div class="card card--center reveal">
+        <p>Hace clic para copiar los datos de nuestra cuenta.</p>
+        <strong><p>Titular: Maria Guadalupe Pauletto</p></strong>
       </div>
     </div>
   </section>
+
   <!-- HISTORIA -->
   <section class="section" id="historia">
     <div class="container">
@@ -178,7 +221,7 @@
         </div>
 
         <div class="storyText reveal">
-          <h3 class="scriptSide">Un amor que crece</h3>
+          <h3 class="bigdate">Un amor que crece</h3>
           <p>
             Aprendimos a elegirnos todos los días, acompañarnos en lo bueno y en lo difícil,
             y celebrar cada paso.
@@ -187,9 +230,7 @@
             Tu presencia suma y hace que el recuerdo sea aún más lindo.
           </p>
 
-          <a class="btn btn--primary"
-             href="https://forms.gle/HTMmEXNotZBisCYw6"
-             target="_blank" rel="noopener">
+          <a class="btn btn--primary" href="https://forms.gle/HTMmEXNotZBisCYw6" target="_blank" rel="noopener">
             Confirmá asistencia
           </a>
         </div>
@@ -214,10 +255,26 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>Misa</td><td>18:00 hs</td><td>Capilla</td></tr>
-              <tr><td>Recepción</td><td>20:00 hs</td><td>Salón Las Heras</td></tr>
-              <tr><td>Civil</td><td>20:00 hs</td><td>Salón Las Heras</td></tr>
-              <tr><td>Cena</td><td>21:30 hs</td><td>Salón Las Heras</td></tr>
+              <tr>
+                <td>Misa</td>
+                <td>18:00 hs</td>
+                <td>Capilla</td>
+              </tr>
+              <tr>
+                <td>Recepción</td>
+                <td>20:00 hs</td>
+                <td>Salón Las Heras</td>
+              </tr>
+              <tr>
+                <td>Civil</td>
+                <td>20:30 hs</td>
+                <td>Salón Las Heras</td>
+              </tr>
+              <tr>
+                <td>Cena</td>
+                <td>21:30 hs</td>
+                <td>Salón Las Heras</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -235,9 +292,11 @@
     </div>
   </section>
 
-  <footer>
+  <footer class="fondo_verde">
     <div class="container">
-      <p class="muted">Con cariño, Guadalupe y Roberto ✨</p>
+      <strong>
+        <p class="muted">Con cariño, Guadalupe y Roberto ✨</p>
+      </strong>
     </div>
   </footer>
 
@@ -259,35 +318,36 @@
     const m = document.getElementById('cdMins');
     const s = document.getElementById('cdSecs');
 
-    function tick(){
+    function tick() {
       const now = Date.now();
       let diff = Math.max(0, target - now);
 
-      const days = Math.floor(diff / (1000*60*60*24));
-      diff -= days * (1000*60*60*24);
-      const hours = Math.floor(diff / (1000*60*60));
-      diff -= hours * (1000*60*60);
-      const mins = Math.floor(diff / (1000*60));
-      diff -= mins * (1000*60);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      diff -= days * (1000 * 60 * 60 * 24);
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      diff -= hours * (1000 * 60 * 60);
+      const mins = Math.floor(diff / (1000 * 60));
+      diff -= mins * (1000 * 60);
       const secs = Math.floor(diff / 1000);
 
-      d.textContent = String(days).padStart(2,'0');
-      h.textContent = String(hours).padStart(2,'0');
-      m.textContent = String(mins).padStart(2,'0');
-      s.textContent = String(secs).padStart(2,'0');
+      d.textContent = String(days).padStart(2, '0');
+      h.textContent = String(hours).padStart(2, '0');
+      m.textContent = String(mins).padStart(2, '0');
+      s.textContent = String(secs).padStart(2, '0');
     }
     tick();
     setInterval(tick, 1000);
 
     // REVEAL (animación al scrollear)
     const rev = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('is-visible');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('is-visible');
       });
-    }, {threshold: 0.14});
-    rev.forEach(el=>io.observe(el));
+    }, { threshold: 0.14 });
+    rev.forEach(el => io.observe(el));
   </script>
 
 </body>
+
 </html>
