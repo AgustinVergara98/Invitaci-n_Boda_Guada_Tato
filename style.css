@@ -76,10 +76,11 @@ a{color:inherit}
 .centro{
   text-align: center;
  }
+
 .center{
   text-align: center;
   font-family:"Parisienne", cursive;
-  font-size: clamp(0.8rem, 2.8vw, 2.6rem);
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
   font-weight:400;
   margin:0 0 10px;
   line-height:1.05;
